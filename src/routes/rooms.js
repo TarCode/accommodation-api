@@ -27,3 +27,17 @@ router.post('/add', (req, res) => {
     res.send(result)
   ))
 })
+
+// Book a student to room
+router.post('/:id', (req, res) => {
+  const student = req.body
+  FindOne(ROOMS, { _id: ObjectID(req.params.id) })
+  .then(result => {
+    console.log('result', result);
+    // TODO: still busy.
+  })
+})
+
+router.post('/:id/book', (req, res) => {
+
+})
