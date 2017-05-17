@@ -2,7 +2,10 @@ import express from 'express'
 import bodyParser from 'body-parser'
 import cors from 'cors'
 
-const port = process.env.PORT || 3000
+import rooms from './routes/rooms'
+import roommates from './routes/roommates'
+
+const port = process.env.PORT || 3001
 
 const app = express()
 
@@ -15,6 +18,9 @@ app.use(cors({
 }))
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
+
+app.use('/rooms', rooms)
+app.use('/roommates', roommates)
 
 app.listen(port, () => {
   console.log('App listening on port ', port);
