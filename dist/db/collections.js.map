@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../src/db/collections.js"],"names":["ROOMS","ROOMMATES"],"mappings":";;;;;AAAO,MAAMA,wBAAQ,OAAd;AACA,MAAMC,gCAAY,WAAlB","file":"collections.js","sourcesContent":["export const ROOMS = 'rooms'\nexport const ROOMMATES = 'roommates'\n"]}
